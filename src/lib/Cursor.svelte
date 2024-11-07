@@ -16,35 +16,37 @@
 	const cy = $derived(size / 2);
 
 	onMount(() => {
-		//const initCursor = () => {
-		/*document.addEventListener('mousemove', (e) => {
+		const initCursor = () => {
+			document.addEventListener('mousemove', (e) => {
 				x = e.clientX;
 				y = e.clientY;
-			});*/
-		if (onHoverAnimate === true) {
-			const hoverables = document.querySelectorAll('.hoverable, a, button');
-			hoverables.forEach((hoverable) => {
-				hoverable.addEventListener('mouseenter', () => {
-					size += 20;
-					document.body.style.cursor = 'none';
-				});
-				hoverable.addEventListener('mouseleave', () => {
-					size -= 20;
-				});
 			});
-		}
-		//};
+			if (onHoverAnimate === true) {
+				const hoverables = document.querySelectorAll('.hoverable, a, button');
+				hoverables.forEach((hoverable) => {
+					hoverable.addEventListener('mouseenter', () => {
+						size += 20;
+						document.body.style.cursor = 'none';
+					});
+					hoverable.addEventListener('mouseleave', () => {
+						size -= 20;
+					});
+				});
+			}
+		};
 
-		//initCursor();
+		initCursor();
 	});
 </script>
 
+<!--
 <svelte:window
 	onmousemove={(e) => {
 		x = e.clientX;
 		y = e.clientY;
 	}}
 />
+-->
 
 <div
 	class="custom-cursor {shape}"

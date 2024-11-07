@@ -38,7 +38,7 @@
 
 		<br />
 		<a href="https://www.npmjs.com/package/svelte-swiftcursor">Documentation</a>
-		<a href="https://github.com/aqeelchishti/svelte-swiftcursor">Github</a>
+		<a href="https://github.com/eagleyeee/svelte-swiftcursor">Github</a>
 	</div>
 
 	<div class="input-controls">
@@ -85,7 +85,7 @@
 	</div>
 	<code class="cursor-output"></code>
 	<div class="credits">
-		Created by <a href="https://github.com/aqeelchishti">Svelte Swiftcursor (Aqeel Chishti)</a>
+		Created by <a href="https://github.com/eagleyeee">Svelte Swiftcursor (eagleyeee)</a>
 	</div>
 </div>
 

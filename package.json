@@ -1,6 +1,6 @@
 {
 	"name": "svelte-swiftcursor",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "Svelte cursor component for creating customizable cursors",
 	"keywords": [
 		"svelte",
@@ -10,7 +10,7 @@
 	],
 	"homepage": "https://svelte-swiftcursor.vercel.app/",
 	"license": "MIT",
-	"author": "Aqeel Chishti",
+	"author": "eagleyeee (Aqeel Chishti)",
 	"repository": "https://github.com/eagleyeee/svelte-swiftcursor",
 	"scripts": {
 		"dev": "vite dev",
