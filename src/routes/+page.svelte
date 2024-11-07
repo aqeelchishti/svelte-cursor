@@ -26,21 +26,19 @@
 		const cursorElement = document.querySelector('.cursor-element');
 		const cursorOutput = document.querySelector('.cursor-output');
 		if (cursorElement && cursorOutput) {
-			cursorOutput.textContent =
-				// format the output
-				`<Cursor color="${cursorColor}" mixBlendMode="${cursorMixBlendMode}" size="${cursorSize}" onHoverAnimate=${onHoverAnimate} />`;
+			cursorOutput.textContent = `<Cursor color="${cursorColor}" mixBlendMode="${cursorMixBlendMode}" size="${cursorSize}" onHoverAnimate=${onHoverAnimate} />`;
 		}
 	});
 </script>
 
 <div class="page">
-	<div class="title">Svelte Cursor</div>
+	<div class="title">Svelte-Swiftcursor</div>
 	<div class="description">
-		Svelte component for creating customizable cursors.
+		Svelte cursor component for creating customizable cursors.
 
 		<br />
-		<!--<a href="https://www.npmjs.com/package/curseur">Documentation</a>-->
-		<a href="https://github.com/aqeelchishti/svelte-cursor">Github</a>
+		<a href="https://www.npmjs.com/package/svelte-swiftcursor">Documentation</a>
+		<a href="https://github.com/aqeelchishti/svelte-swiftcursor">Github</a>
 	</div>
 
 	<div class="input-controls">
@@ -87,7 +85,7 @@
 	</div>
 	<code class="cursor-output"></code>
 	<div class="credits">
-		Created by <a href="https://github.com/aqeelchishti">Svelte Cursor (Aqeel Chishti)</a>
+		Created by <a href="https://github.com/aqeelchishti">Svelte Swiftcursor (Aqeel Chishti)</a>
 	</div>
 </div>
 
