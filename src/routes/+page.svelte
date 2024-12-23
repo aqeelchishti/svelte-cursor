@@ -72,7 +72,7 @@
 
 	a {
 		cursor: none;
-		color: #ffdada;
+		color: #fff;
 	}
 
 	.title {
