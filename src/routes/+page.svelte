@@ -65,7 +65,7 @@
 		font-family: 'Satoshi', sans-serif;
 		top: 0;
 		left: 0;
-		height: 100%;
+		height: 100vh;
 		background-color: #0097b2;
 		cursor: none;
 	}
@@ -95,6 +95,7 @@
 		align-items: center;
 		padding: 2rem 2rem;
 		color: #fff;
+		margin: 0 4rem;
 		font-size: 1.5rem;
 	}
 
@@ -107,7 +108,8 @@
 		justify-content: center;
 		align-items: center;
 		padding: 1rem 2rem;
-		border-radius: 10px;
+		margin: 0 4rem;
+		border-radius: 2px;
 		margin-top: 2rem;
 	}
 
@@ -116,6 +118,7 @@
 		text-align: center;
 		color: #fff;
 		padding: 2rem 2rem;
+		margin-top: 15rem;
 	}
 	.cursor-element {
 		display: flex;
