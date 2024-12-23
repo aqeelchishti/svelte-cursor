@@ -1,38 +1,22 @@
-<script>
-	import Cursor from '$lib/Cursor.svelte';
-	import { onMount, afterUpdate } from 'svelte';
-	let cursorColor = 'black';
-	let cursorSize = 28;
-	let cursorSquare = false;
-	let cursorMixBlendMode = 'normal';
-	let cursorShape = 'circle';
-	let onHoverAnimate = false;
+<script lang="ts">
+	import Cursor from '$lib/components/Cursor.svelte';
 
-	if (cursorSquare) {
-		cursorShape = 'square';
-	}
+	let cursorColor = $state('black');
+	let cursorSize = $state(28);
+	let cursorSquare = $state(false);
+	let onHoverAnimate = $state(false);
 
-	onMount(() => {
+	$effect(() => {
 		const cursorElement = document.querySelector('.cursor-element');
 		const cursorOutput = document.querySelector('.cursor-output');
 		if (cursorElement && cursorOutput) {
-			cursorOutput.textContent =
-				// format the output
-				`<Cursor color="${cursorColor}" mixBlendMode="${cursorMixBlendMode}" size="${cursorSize}" onHoverAnimate=${onHoverAnimate} />`;
-		}
-	});
-
-	afterUpdate(() => {
-		const cursorElement = document.querySelector('.cursor-element');
-		const cursorOutput = document.querySelector('.cursor-output');
-		if (cursorElement && cursorOutput) {
-			cursorOutput.textContent = `<Cursor color="${cursorColor}" mixBlendMode="${cursorMixBlendMode}" size="${cursorSize}" onHoverAnimate=${onHoverAnimate} />`;
+			cursorOutput.textContent = `<Cursor cColor="${cursorColor}" cSize="${cursorSize}" hoverAnimate=${onHoverAnimate} cShape=${cursorSquare} />`;
 		}
 	});
 </script>
 
 <div class="page">
-	<div class="title">Svelte-Swiftcursor</div>
+	<div class="title">Svelte Swiftcursor</div>
 	<div class="description">
 		Svelte cursor component for creating customizable cursors.
 
@@ -50,32 +34,10 @@
 			<label for="size">Size</label>
 			<input type="number" bind:value={cursorSize} placeholder="Size" id="size" />
 		</div>
-		<!-- use a select for mix-blend-mode -->
-		<div>
-			<label for="mix-blend-mode">Mix Blend Mode</label>
-			<select bind:value={cursorMixBlendMode} id="mix-blend-mode">
-				<option value="normal">Normal</option>
-				<option value="multiply">Multiply</option>
-				<option value="screen">Screen</option>
-				<option value="overlay">Overlay</option>
-				<option value="darken">Darken</option>
-				<option value="lighten">Lighten</option>
-				<option value="color-dodge">Color Dodge</option>
-				<option value="color-burn">Color Burn</option>
-				<option value="hard-light">Hard Light</option>
-				<option value="soft-light">Soft Light</option>
-				<option value="difference">Difference</option>
-				<option value="exclusion">Exclusion</option>
-				<option value="hue">Hue</option>
-				<option value="saturation">Saturation</option>
-				<option value="color">Color</option>
-				<option value="luminosity">Luminosity</option>
-			</select>
-		</div>
 
 		<div>
 			<label for="square">OnHover Animate</label>
-			<input type="checkbox" bind:checked={onHoverAnimate} id="square" />
+			<input type="checkbox" bind:checked={onHoverAnimate} id="onhover" />
 		</div>
 
 		<div>
@@ -91,20 +53,19 @@
 
 <div class="cursor-element">
 	<Cursor
-		color={cursorColor}
-		mixBlendMode={cursorMixBlendMode}
-		size={cursorSize}
-		shape={cursorSquare ? 'square' : 'circle'}
-		{onHoverAnimate}
+		cColor={cursorColor}
+		cSize={cursorSize}
+		cShape={cursorSquare ? 'square' : 'circle'}
+		hoverAnimate={onHoverAnimate}
 	/>
 </div>
 
 <style scoped>
 	.page {
 		font-family: 'Satoshi', sans-serif;
-		margin: 2rem 2rem;
-		min-height: 100vh;
-		border-radius: 15px;
+		top: 0;
+		left: 0;
+		height: 100%;
 		background-color: #0097b2;
 		cursor: none;
 	}

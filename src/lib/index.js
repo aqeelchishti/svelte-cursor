@@ -1,3 +1,3 @@
-import Cursor from '$lib/Cursor.svelte';
+import Cursor from '$lib/components/Cursor.svelte';
 
 export { Cursor };
